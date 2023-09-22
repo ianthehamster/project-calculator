@@ -16,7 +16,7 @@ We suggest the following features to be incorporated into your app:
 1. Basic inputs to be entered and displayed on a screen
 2. Inputs can be calculated after a click of an "equal" sign
 3. Users are able to "clear" the screen if mistakes were made
-4. Calculator is able to handle input validation to ensure users do not enter 2 operators in a row (i.e enter "6*/3" and try run a calculation)
+4. Input validation to ensure users do not enter double operations (i.e. */ or -\*) that will cause errors
 
 ### Suggested Components
 
