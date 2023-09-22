@@ -6,7 +6,7 @@ function Screen() {
   const { calcState } = useContext(CalculateContext);
 
 
-  return <div className="screen"><p>{calcState.currentOperation}</p></div>;
+  return <div className="screen"><p></p></div>;
 }
 
 export default Screen;

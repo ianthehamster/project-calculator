@@ -1,10 +1,6 @@
-import {
-  ADD,
-  CALCULATE,
-  CLEAR,
-  BACKSPACE,
-} from "./calculateActionType";
+import { ADD, CALCULATE, CLEAR } from "./calculateActionType";
 
+// Sample Initial State
 export const initialState = [
   {
     currentOperation: "0",
@@ -12,50 +8,25 @@ export const initialState = [
   },
 ];
 
+// The reducer function to be used to manipulate the shared state
 export function calculateReducer(state, action) {
   switch (action.type) {
     case ADD:
-      let oldState = "";
-      if (!state.calculated) {
-        oldState = state.currentOperation ? state.currentOperation : "";
-      }
-
-      return {
-        currentOperation: oldState + action.payload.input,
-        calculated: false,
-      };
+      return state;
     case CALCULATE:
-      
-      try {
-        // eslint-disable-next-line no-eval
-        const calcOutput = eval(state.currentOperation);
-        return { currentOperation: calcOutput.toFixed(1), calculated: true };
-      } catch {
-        return initialState;
-      }
-
-    case BACKSPACE:
-      if (!state.currentOperation.length) {
-        return state;
-      }
-      const subtractedState = { ...state };
-      const newOperation = subtractedState.currentOperation.slice(0, -1);
-      subtractedState.currentOperation = newOperation;
-      return subtractedState;
-
+      return state;
     case CLEAR:
-      return initialState;
-
+      return state;
     default:
       return state;
   }
 }
 
-export function addAction(input) {
+// the following actions are to help set up our data easily to be easily used with our reducer function above
+export function addAction() {
   return {
     type: ADD,
     payload: {
-      input,
     },
   };
 }
@@ -67,12 +38,6 @@ export function calculateAction() {
   };
 }
 
-export function backspaceAction() {
-  return {
-    type: BACKSPACE,
-    payload: {},
-  };
-}
 
 export function clearAction() {
   return {

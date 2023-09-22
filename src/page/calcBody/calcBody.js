@@ -17,10 +17,6 @@ function CalcBody() {
 
   const { calcDispatch } = useContext(CalculateContext);
 
-  const handleClear = () => {
-    calcDispatch(clearAction());
-  };
-
   return (
     <div className="calcContainer">
       <Screen />
@@ -35,9 +31,6 @@ function CalcBody() {
           );
         })}
       </div>
-      <button onClick={handleClear} className="clearBtn">
-        CLEAR
-      </button>
     </div>
   );
 }
