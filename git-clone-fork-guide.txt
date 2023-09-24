@@ -40,6 +40,30 @@ git status
 git diff <file-name>
 ``` shows difference between two or more sets of changes in a git repo
 
+```bash
+git add <file>
+``` Stages the changes
+
+```bash
+git commit -m "commit message"
+``` Commit the changes with a message
+
+```bash
+git status
+``` makes sure that there is nothing to commit and the working tree is clean
+
+```bash
+git log
+``` lists a detailed history of commits in a Git repository
+
+```bash
+git branch
+``` check which branch you are on before pushing the commits to the remote Github repo
+
+```bash 
+git push origin main
+``` 
+
 6. **Make Changes**: Open the files you want to modify, make your changes, and save the files.
 
 7. **Stage Changes**: In Visual Studio Code, use the Source Control panel (usually on the left sidebar) to stage your changes. Click the "+" icon next to each file you want to include in the commit.
