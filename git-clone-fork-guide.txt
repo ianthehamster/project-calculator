@@ -1,0 +1,73 @@
+Certainly! Here's a step-by-step guide to forking a repository on GitHub, cloning it to your local machine, making changes, committing those changes, and pushing them back to your GitHub repository using Visual Studio Code:
+
+**Forking a Repository:**
+
+1. **Visit the Repository**: Go to the GitHub repository you want to fork, and click the "Fork" button in the upper right corner of the repository page. This creates a copy of the repository in your GitHub account.
+
+**Cloning the Forked Repository:**
+
+1. **Copy the Repository URL**: On your forked repository's page, click the green "Code" button, and copy the repository URL provided (HTTPS or SSH).
+
+2. **Open a Terminal**: Open a terminal or use the integrated terminal in Visual Studio Code.
+
+3. **Navigate to the Desired Directory**: Use the `cd` command to navigate to the directory where you want to clone the repository:
+
+   ```bash
+   cd /path/to/your/directory
+   ```
+
+4. **Clone the Repository**: Use the `git clone` command to clone the repository from your GitHub account to your local machine. Replace `<repository-url>` with the URL you copied earlier:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+   For example:
+
+   ```bash
+   git clone https://github.com/your-username/your-forked-repo.git
+   ```
+
+**Making and Committing Changes:**
+
+5. **Open the Repository in Visual Studio Code**: Launch Visual Studio Code and open the cloned repository by selecting "File" -> "Open Folder" and choosing the directory where you cloned the repository.
+
+```bash
+git status
+``` checks if there are any logs to be committed
+
+```bash
+git diff <file-name>
+``` shows difference between two or more sets of changes in a git repo
+
+6. **Make Changes**: Open the files you want to modify, make your changes, and save the files.
+
+7. **Stage Changes**: In Visual Studio Code, use the Source Control panel (usually on the left sidebar) to stage your changes. Click the "+" icon next to each file you want to include in the commit.
+
+8. **Commit Changes**: Enter a commit message describing your changes and click the checkmark icon to commit the changes.
+
+**Pushing Changes to Your GitHub Repository:**
+
+9. **Push Changes to GitHub**: Use the following command to push your changes to your GitHub repository. Replace `<branch-name>` with the name of the branch you're working on (e.g., "main" or "master"):
+
+    ```bash
+    git push origin <branch-name>
+    ```
+
+    For example:
+
+    ```bash
+    git push origin main
+    ```
+
+**Creating a Pull Request:**
+
+10. **Open GitHub**: Go to your forked repository on the GitHub website.
+
+11. **Click "New Pull Request"**: GitHub will recognize the recent push and suggest creating a pull request. Click the "New Pull Request" button.
+
+12. **Review Changes**: Ensure that the changes you made are displayed in the pull request.
+
+13. **Create Pull Request**: Add a title and description to your pull request, and then click the "Create Pull Request" button.
+
+Your pull request is now created, and it can be reviewed and merged into the original repository by the repository's owner or maintainers.
