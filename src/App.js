@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <CalculateProvider>
-        <h1>Rocket Academy Calculator App</h1>
+        <h1>Ian's Calculator App</h1>
         <CalcBody />
       </CalculateProvider>
     </div>
